@@ -121,10 +121,26 @@ div.sidenav a:hover{
 }
 
 .cover2{
-	background-image: url("images/bg3.png");
+	background-image: url("images/bg.jpeg");
 	width:100%;
 	min-height: 540%;
 	color: whitesmoke;
+}
+
+.contact-bg{
+	margin-top: 12vh;
+	width:100%;
+	min-height: 110vh;
+	margin-bottom: -16vh;
+	background-image: url("images/contactbg.png");
+}
+
+.login-bg{
+	margin-top: 12vh;
+	width:100%;
+	min-height: 84vh;
+	margin-bottom: -16vh;
+	background-image: url("images/bg4.jpg");
 }
 
 .center{
@@ -161,7 +177,7 @@ button.begin:hover{
 .sub{
 	font-family: Candara;
 	text-align: center;
-	padding-top: 10vh;
+	padding-top: 12vh;
 	padding-bottom: 5vh;
 }
 .sub h2{
@@ -277,13 +293,29 @@ cursor: pointer;
 .card{
 	font-family: Candara;
 	font-size: 2.8vh;
-	column-count: 2;
+	column-count: 3;
 	column-gap: 0.5vw;
 	color: black;
 	padding-block:2vh;
-	margin-inline: 10vw;
+	margin-left: 5vw;
 	text-align: left;
+	display: flex;
 }
+
+.col3{
+	padding-inline: 1vw;
+	width:26vw;
+}
+
+.col3 ul li{
+	text-decoration: underline;
+	text-align: center;
+}
+
+.col3.quick{
+	text-align: center;
+}
+
 p.contact{
 	position: relative;
 	left: 1vw;
@@ -308,7 +340,7 @@ p.contact{
 	margin-block: 2vh;
 	margin-inline: 2vw;
 	border-radius: 10px;
-	width: 30vw;
+	width: 18vw;
 }
 
 .btn{
@@ -323,7 +355,7 @@ p.contact{
 	color: white;
 	transition-duration: 0.5s;
 	margin-block: 2vh;
-	width: 34vw;
+	width: 22vw;
 }
 .subscribe{
 	margin-inline: 2vw;
@@ -339,7 +371,179 @@ p.contact{
     outline: none;
 }
 .app{
-	width: 12vw;
-	height: 7vh;
+	width: 7vw;
+	height: 4vh;
 	padding-inline: 1vw;
+}
+
+.contactcard{
+	background-color: rgba(245,245,245,0.6);
+	position: absolute;
+	top: 22%;
+	right: 23%;
+	text-align: center;
+	font-family: Candara;
+	font-size: 7vh;
+	font-weight: bold;
+	color: black;
+	width: 45vw;
+	padding-bottom: 4vh;
+	padding-inline: 3vw;
+	box-shadow: 0 0.5vh 1vh 0 grey;
+}
+
+.contactcard h2{
+	margin-top: -2vh;
+	font-size: 4.5vh;
+	color: black;
+}
+
+input, textarea{
+	border: none;
+	background-color: white;
+	font-family: Candara;
+	font-size: 2.8vh;
+	padding-block: 2vh;
+	padding-inline: 2vw;
+	margin-block:1vh;
+	margin-inline: 2vw;
+	border-radius: 10px;
+	width: 28vw;
+}
+
+textarea{
+	margin-top: 2vh;
+}
+
+input:focus, textarea:focus{
+	border: 2px solid black;
+	outline: none;
+}
+.submit{
+	border: none;
+	padding: 2vh 2vw;
+	background-color: rgba(0,0,0,0.6);
+	opacity: 1;
+	text-decoration: none;
+	font-family: Candara;
+	font-size: 2.8vh;
+	border-radius: 10px;
+	color: white;
+	transition-duration: 0.5s;
+	margin-block: 2vh;
+	width: 32vw;
+}
+.submit:hover{
+	outline: none;
+	background-color: rgba(0,0,0,1);
+	color: white;
+	cursor: pointer;
+}
+.submit,.submit:active,.submit:focus {
+    border: none;
+    outline: none;
+}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */ 
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+/* Modal Content */
+.modal-content {
+	position: relative;
+	background-color: white;
+	margin: auto;
+	padding-inline: 0;
+	border: 1px solid #888;
+	width: 80%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+}
+  
+.modal-body{
+	margin-inline: 3vw;
+	margin-bottom: 2vh;
+}
+
+.modal-body li{
+	padding-block: 0.5vh;
+}
+
+.modal-body li a{
+	text-align: left;
+}
+
+  /* Add Animation */
+@-webkit-keyframes animatetop {
+	from {top:-300px; opacity:0} 
+	to {top:0; opacity:1}
+}
+  
+@keyframes animatetop {
+	from {top:-300px; opacity:0}
+	to {top:0; opacity:1}
+}
+  
+  /* The Close Button */
+.close {
+	color: white;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+  }
+  
+.modal-header {
+	padding: 2px 16px;
+	background-color: black;
+	color: white;
+  }
+  
+.modal-body {padding: 2px 16px;}
+  
+
+.about p{
+	margin-inline: 15vw;
+	font-size: 3.2vh;
+}
+
+.logincard{
+	background-color: rgba(245,245,245,0.6);
+	position: absolute;
+	top: 22%;
+	right: 23%;
+	text-align: center;
+	font-family: Candara;
+	font-size: 7vh;
+	font-weight: bold;
+	color: black;
+	width: 45vw;
+	padding-bottom: 4vh;
+	padding-inline: 3vw;
+	box-shadow: 0 0.5vh 1vh 0 grey;
+}
+
+.logincard h2{
+	margin-top: -2vh;
+	font-size: 4.5vh;
+	color: black;
 }
